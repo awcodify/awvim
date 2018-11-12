@@ -14,11 +14,12 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'Valloric/YouCompleteMe'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Theme
@@ -30,12 +31,6 @@ let g:rspec_command = "call Send_to_Tmux('bundle exec rspec -f d {spec}\n')"
 let g:rspec_runner = "os_x_iterm2"
 " ale linting
 let b:ale_fixers = {'ruby': ['rubocop']}
-
-" ctrl+p
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 "ale
 " let g:ale_linters = {'ruby': ['ruby', 'rubocop'] }
