@@ -18,13 +18,12 @@ Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'altercation/vim-colors-solarized'
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Theme
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night-Eighties
 
 " rspec custom command
 let g:rspec_command = "call Send_to_Tmux('bundle exec rspec -f d {spec}\n')"
