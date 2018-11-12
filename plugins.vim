@@ -21,6 +21,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Theme
