@@ -1,9 +1,6 @@
-execute pathogen#infect()
 syntax on
 
 set nocompatible
-
-set background=dark
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting

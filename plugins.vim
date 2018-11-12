@@ -14,11 +14,20 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
-" rspec custom command
+" Theme
+set background=dark
+colorscheme solarized
 
-let g:rspec_command = "call Send_to_Tmux('bin/rspec -f d {spec}\n')"
+" rspec custom command
+let g:rspec_command = "call Send_to_Tmux('bundle exec rspec -f d {spec}\n')"
 let g:rspec_runner = "os_x_iterm2"
 " ale linting
 let b:ale_fixers = {'ruby': ['rubocop']}
