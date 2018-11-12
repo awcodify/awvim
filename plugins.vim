@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " Theme
