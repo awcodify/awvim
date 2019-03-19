@@ -50,12 +50,6 @@ let NERDTreeHijackNetrw = 0
 nmap <leader>g :NERDTreeToggle<CR>
 nmap <leader>r :NERDTreeFind<CR>
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 " ALE
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -78,3 +72,23 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 " map for file search
 nmap <c-p> :Files<CR>
+
+" Map test runner
+nnoremap <Leader>s :TestNearest<CR>
+nnoremap <Leader>f :TestFile<CR>
+nnoremap <Leader>n :TestSuite<CR>
+nnoremap <Leader>l :TestLast<CR>
+nnoremap <Leader>g :TestVisit<CR>
+
+"Avoid using arrows
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Rigth> <Nop>
+
+"copy to clipboard
+vmap <leader>d :!pbcopy<CR>
+vmap <leader>y :w !pbcopy<CR><CR>
+
+"functions
+map <Leader>cd :call SearchForDeclarationCursor()<CR>

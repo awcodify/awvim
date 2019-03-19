@@ -1,12 +1,12 @@
 call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 Plug 'flazz/vim-colorschemes'
-Plug 'skreek/skeletor.vim'
-Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-endwise'
+Plug 'janko-m/vim-test'
+Plug 'benmills/vimux'
 Plug 'tpope/vim-rails'
 Plug 'jgdavey/tslime.vim'
 Plug 'slim-template/vim-slim'
-Plug 'mileszs/ack.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'Shougo/deoplete.nvim'
@@ -22,22 +22,21 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
+Plug 'elixir-editors/vim-elixir'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Theme
 set background=dark
-colorscheme Tomorrow-Night-Eighties
-
-" rspec custom command
-let g:rspec_command = "call Send_to_Tmux('bundle exec rspec -f d {spec}\n')"
-let g:rspec_runner = "os_x_iterm2"
-" ale linting
-let b:ale_fixers = {'ruby': ['rubocop']}
+" colorscheme Tomorrow-Night-Eighties
+" colorscheme Benokai
+colorscheme Hemisu
+" test runner in tmux
+let test#strategy = "vimux"
 
 "ale
-" let g:ale_linters = {'ruby': ['ruby', 'rubocop'] }
-let g:ale_linters = {'ruby': ['rubocop'] }
-let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint']}
+let g:ale_linters = {'ruby': ['rubocop'], 'elixir': ['credo'], 'javascript': ['eslint'] }
+let g:ale_fixers = {'ruby': ['rubocop'], 'elixir': ['mix_format'], 'javascript': ['prettier', 'eslint']}
 
 " Enable completion where available.
 let g:ale_completion_enabled = 1
