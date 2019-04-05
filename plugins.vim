@@ -17,13 +17,16 @@ Plug 'leafgarland/typescript-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mattn/emmet-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'shougo/neocomplete.vim'
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 " Theme
