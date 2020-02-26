@@ -1,3 +1,4 @@
+
 " insert blank lines without going into insert mode
 nmap go o<esc>
 nmap gO O<esc
@@ -92,3 +93,21 @@ vmap <leader>y :w !pbcopy<CR><CR>
 
 "functions
 map <Leader>cd :call SearchForDeclarationCursor()<CR>
+
+" Command to generate group_vars variable
+map <Leader>gvc :%s/\(^\\|\(.*{{.*}}.*\)\@<=\).\{-}\($\\|.*{{.*}}.*\)\@=//g<CR>:%s/^\n//g<CR>
+map <Leader>cn :%s/^\n//g
+map <Leader>gv :let @a=""<CR>:%s/{ \zs.\{-}\ze\ /\=setreg('A', submatch(0), 'l')/g<CR>:%d _<CR>:pu a<CR>:0d _<CR>i:
+
+" Map vim-go
+nnoremap <Leader>fs :GoFillStruct<CR>
+
+
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Search inside the file
+nmap <C-s>f :BLines<CR>
